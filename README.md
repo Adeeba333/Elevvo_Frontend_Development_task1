@@ -41,12 +41,21 @@ toBATO/
 │
 └── images/
     ├── logo1.png
+<<<<<<< HEAD
     ├── bannertobatomanga.png
     ├── bannertobatomanhwa.png
     ├── bannertobatomanhua.png
     ├── bannertobatowebtoon.png
     ├── bannertobatowebnovel.png
     └── bannertobatonovels.png
+=======
+    ├── tobatomanga.png
+    ├── tobatomanhwa.png
+    ├── tobatomanhua.png
+    ├── tobatowebtoon.png
+    ├── tobatowebnovel.png
+    └── tobatonovels.png
+>>>>>>> 0c71f7d519a241daf6bffb63e8cae7076394333f
 ```
 
 ##  HTML Structure
