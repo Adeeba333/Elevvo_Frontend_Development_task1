@@ -1,2 +1,6 @@
-## Problem Statement
-Many developer profile webpages focus heavily on visual styling while overlooking semantic HTML structure, accessibility, and proper document hierarchy. This can make webpages difficult to understand, navigate, and use with assistive technologies. Therefore, this project aims to develop a raw HTML5 Elevvo Developer Profile using only semantic markup, without CSS styling. The webpage must follow a valid HTML5 structure, use appropriate semantic elements, provide accessible form controls with explicitly associated labels, include meaningful alternative text for images, and maintain a clear and valid DOM hierarchy. The goal is to create a well-structured, accessible, and maintainable foundation that can later be enhanced with CSS and JavaScript.
+### Problem Statement
+
+Develop a responsive and accessible sidebar navigation component using HTML5, CSS3, and JavaScript ES6+. The sidebar should contain a logo placeholder, 4–5 navigation links with icons, and a toggle button that allows users to open and close the sidebar. Semantic HTML, WCAG/ARIA practices, Flexbox or CSS Grid, and responsive design should be used to ensure a clean and accessible layout. JavaScript DOM manipulation and event handling should control the sidebar’s toggle behavior, while CSS transitions provide a smooth open/close animation.
+
+
+

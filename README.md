@@ -1,152 +1,118 @@
-# Elevvo Developer Profile
+# toBATO.to Dashboard
 
-A simple and semantic **developer portfolio profile webpage** built using HTML5. This project presents a front-end developer's profile, skills, publication, education, and contact information in a structured and accessible format.
+A responsive and accessible dashboard interface inspired by a manga and web-comic reading platform. The project demonstrates semantic HTML5, responsive CSS3 design, and JavaScript-based sidebar interactions.
 
-## Project Overview
+##  About the Project
 
-The **Elevvo Developer Profile** is a personal developer profile webpage created using pure HTML. It demonstrates the use of semantic HTML5 elements, accessible navigation, forms, external links, and structured content.
+**toBATO.to Dashboard** is a responsive web interface containing a collapsible sidebar navigation and category cards for Manga, Manhwa, Manhua, Webtoon, Webnovel, and Novel.
 
-The webpage includes information about:
-
-- Developer profile
-- Technical skills
-- Development tools
-- Research publication
-- Educational background
-- Contact form
-- Social media profiles
+The project focuses on clean layout, accessibility, responsive behavior, and smooth sidebar and card animations.
 
 ##  Features
 
-### About Me
-- Developer profile and introduction
-- Profile image
-- Current role
-- Location
-- Language information
+- Responsive sidebar navigation
+- Open/close sidebar toggle
+- Mobile-friendly navigation
+- Manga, Manhwa, Manhua, Webtoon, Webnovel, and Novel category cards
+- Category banner images
+- Keyboard support using the `Escape` key
+- ARIA attributes for accessibility
+- Focus management when opening and closing the sidebar
+- Responsive layout using CSS Grid and Flexbox
+- Smooth transitions and animations
+- Reduced-motion support
+- Light and dark color-scheme support
 
-### Skills
-The webpage highlights several technical skills, including:
+##  Technologies Used
 
-- HTML5
-- CSS3
-- Java
-- JavaScript
-- React.js
-- Python
-- Git
-- Problem Solving and Debugging
+- **HTML5** – Semantic page structure and accessible navigation
+- **CSS3** – Responsive layout, Grid, Flexbox, transitions, media queries, and custom properties
+- **JavaScript ES6+** – DOM manipulation, event handling, sidebar state management, and responsive behavior
 
-### Tools
-Development tools included in the profile:
-
-- Visual Studio Code
-- GitHub
-- Browser DevTools
-
-### Publication
-
-The profile includes a research publication titled:
-
-**"Rice MultiNet: A Hybrid Deep Learning Feature-Fusion Model for Multi-Class Rice Leaf Disease Identification with Explainable AI and Web Deployment"**
-
-The publication section provides a brief description of the research and a link to the paper on IEEE Xplore.
-
-###  Education
-
-The education section contains:
-
-- **Degree:** Bachelor of Science in Computer Science and Engineering (CSE)
-- **University:** Bangladesh University of Business & Technology
-- **Location:** Dhaka, Bangladesh
-- **Graduation Year:** 2026
-
-### Contact Form
-
-The webpage contains an accessible contact form with:
-
-- Full Name
-- Email Address
-- Phone Number
-- Contact topic
-- Message
-- Preferred contact method
-- Consent checkbox
-- Submit and Reset buttons
-
-HTML validation is used for required fields, email addresses, and phone number input.
-
-### Social Media
-
-Links are provided to:
-- LinkedIn
-- GitHub
-
-## Technologies Used
-
-| Technology | Purpose |
-|---|---|
-| HTML5 | Structure and content |
-| Semantic HTML | Accessible and meaningful page structure |
-| HTML Forms | Contact form functionality |
-| CSS Inline Styling | Basic list styling |
-| ARIA Attributes | Improved accessibility |
-
-## Project Structure
+##  Project Structure
 
 ```text
-Elevvo-Developer-Profile/
+toBATO/
 │
 ├── index.html
-├── developer_image.jpeg
-└── README.md
+├── style.css
+├── script.js
+├── problem statement.md
+│
+└── images/
+    ├── logo1.png
+    ├── bannertobatomanga.png
+    ├── bannertobatomanhwa.png
+    ├── bannertobatomanhua.png
+    ├── bannertobatowebtoon.png
+    ├── bannertobatowebnovel.png
+    └── bannertobatonovels.png
 ```
 
-### File Description
+##  HTML Structure
 
-**`index.html`**  
-Contains the complete HTML structure of the developer profile webpage.
+The HTML provides a semantic layout containing:
 
-**`developer_image.jpeg`**  
-Profile image displayed in the About Me section.
+- Sidebar navigation
+- Logo and brand area
+- Navigation links
+- Sidebar toggle buttons
+- Main dashboard content
+- Category cards
+- Footer
 
-**`README.md`**  
-Project documentation and information about the webpage.
+The category cards use background images through CSS custom properties.
 
-## Accessibility
+##  CSS Features
 
-The project uses several HTML accessibility features, including:
+The stylesheet uses CSS custom properties, Flexbox, CSS Grid, responsive media queries, transitions, focus indicators, and dark-mode support.
 
-- Semantic HTML5 elements such as `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, and `<footer>`
-- Descriptive image `alt` text
-- Form labels connected to their corresponding inputs
-- ARIA labels and labelled sections
-- Required-field validation
-- Helpful input descriptions
+The sidebar changes between a desktop collapsible layout and a mobile slide-out navigation. 
 
-## External Links
+The category cards display their banner images when hovered, focused, or activated.
 
-The webpage provides external links to:
+##  JavaScript Functionality
 
-- IEEE Xplore for the research publication
-- LinkedIn professional profile
-- GitHub profile
+JavaScript controls the sidebar state and user interactions.
 
-External links are configured to open in a new browser tab using `target="_blank"` with `rel="noopener noreferrer"`.
+Main functionality includes:
 
-## Author
+- Opening and closing the sidebar
+- Updating `aria-expanded`
+- Managing sidebar focus
+- Closing the sidebar with the `Escape` key on mobile
+- Automatically closing the sidebar after selecting a navigation item on mobile
+- Detecting screen-size changes
+
+These behaviors are implemented using DOM manipulation, event listeners, and `matchMedia()`. 
+
+##  Accessibility
+
+Accessibility considerations include:
+
+- Semantic HTML elements
+- ARIA labels
+- `aria-expanded`
+- `aria-current`
+- Keyboard navigation
+- Visible focus indicators
+- Focus management
+- `inert` sidebar state when closed
+- Reduced-motion support
+
+##  Responsive Design
+
+The interface adapts to different screen sizes.
+
+On desktop, the sidebar appears alongside the main content. On smaller screens, the sidebar becomes a slide-out panel with a menu button and overlay.
+
+
+##  Project Objective
+
+The objective is to develop a responsive and accessible sidebar navigation component using HTML5, CSS3, and JavaScript ES6+, while applying semantic HTML, WCAG/ARIA practices, responsive design, DOM manipulation, event handling, and smooth CSS transitions.
+
+##  Author
 
 **Mahmuda Adeeba Tul Husna**
-**Role:** Front-end Developer Intern
-**Location:** Dhaka, Bangladesh
 
-### Profiles
-
-- LinkedIn: Mahmuda Adeeba Tul Husna
-- GitHub: Adeeba333
-
-## License
-
-This project is created for educational and portfolio purposes.
-
-© 2026 Mahmuda Adeeba Tul Husna. All rights reserved.
+© 2026 toBATO | Adeeba
