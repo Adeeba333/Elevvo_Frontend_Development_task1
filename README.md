@@ -1,35 +1,37 @@
-# toBATO.to Dashboard
+# toBATO.to — Responsive Sidebar Dashboard
 
-A responsive and accessible dashboard interface inspired by a manga and web-comic reading platform. The project demonstrates semantic HTML5, responsive CSS3 design, and JavaScript-based sidebar interactions.
+A responsive dashboard interface for **toBATO.to**, designed as a frontend development task focusing on sidebar navigation, responsive layouts, accessibility, and smooth UI interactions.
 
-##  About the Project
+## Overview
 
-**toBATO.to Dashboard** is a responsive web interface containing a collapsible sidebar navigation and category cards for Manga, Manhwa, Manhua, Webtoon, Webnovel, and Novel.
+This project implements a clean dashboard layout with a collapsible sidebar and content cards for different reading categories such as Manga, Manhwa, Manhua, Webtoon, Webnovel, and Novel.
 
-The project focuses on clean layout, accessibility, responsive behavior, and smooth sidebar and card animations.
+The interface is built using **HTML5, CSS3, and vanilla JavaScript**, with a strong focus on semantic structure, responsive behavior, keyboard accessibility, and reusable styling.
 
-##  Features
+## Features
 
-- Responsive sidebar navigation
-- Open/close sidebar toggle
-- Mobile-friendly navigation
-- Manga, Manhwa, Manhua, Webtoon, Webnovel, and Novel category cards
-- Category banner images
-- Keyboard support using the `Escape` key
-- ARIA attributes for accessibility
-- Focus management when opening and closing the sidebar
-- Responsive layout using CSS Grid and Flexbox
-- Smooth transitions and animations
-- Reduced-motion support
-- Light and dark color-scheme support
+- Responsive collapsible sidebar navigation
+- Desktop and mobile sidebar behavior
+- Dashboard category cards with image backgrounds
+- SVG-based navigation icons
+- Accessible buttons and navigation using ARIA attributes
+- Keyboard support with the `Escape` key
+- Responsive behavior using `matchMedia()`
+- Smooth sidebar and card animations
+- Hover, focus, and tap interactions
+- `prefers-reduced-motion` support
+- CSS custom properties for reusable design values
+- Mobile overlay/scrim when the sidebar is open
+- Safe-area support for modern mobile devices
 
-##  Technologies Used
+## Technologies Used
 
-- **HTML5** – Semantic page structure and accessible navigation
-- **CSS3** – Responsive layout, Grid, Flexbox, transitions, media queries, and custom properties
-- **JavaScript ES6+** – DOM manipulation, event handling, sidebar state management, and responsive behavior
+- **HTML5** — Semantic page structure and accessible navigation
+- **CSS3** — Grid, Flexbox, custom properties, media queries, transitions, and responsive design
+- **JavaScript ES6+** — DOM manipulation, event handling, `matchMedia()`, and state management
+- **SVG** — Lightweight reusable navigation icons
 
-##  Project Structure
+## Project Structure
 
 ```text
 toBATO/
@@ -37,91 +39,98 @@ toBATO/
 ├── index.html
 ├── style.css
 ├── script.js
-├── problem statement.md
 │
 └── images/
     ├── logo1.png
-<<<<<<< HEAD
-    ├── bannertobatomanga.png
-    ├── bannertobatomanhwa.png
-    ├── bannertobatomanhua.png
-    ├── bannertobatowebtoon.png
-    ├── bannertobatowebnovel.png
-    └── bannertobatonovels.png
-=======
-    ├── tobatomanga.png
-    ├── tobatomanhwa.png
-    ├── tobatomanhua.png
-    ├── tobatowebtoon.png
-    ├── tobatowebnovel.png
-    └── tobatonovels.png
->>>>>>> 0c71f7d519a241daf6bffb63e8cae7076394333f
+    ├── tobatomanga.jpg
+    ├── tobatomanhwa.jpg
+    ├── tobatomanhua.jpg
+    ├── tobatowebtoon.jpg
+    ├── tobatowebnovels.jpg
+    └── tobatonovels.jpg
 ```
 
-##  HTML Structure
+## Technical Implementation
 
-The HTML provides a semantic layout containing:
+### Responsive Sidebar
 
-- Sidebar navigation
-- Logo and brand area
-- Navigation links
-- Sidebar toggle buttons
-- Main dashboard content
-- Category cards
-- Footer
+The sidebar uses a data attribute to manage its state:
 
-The category cards use background images through CSS custom properties.
+```html
+<div class="app" data-sidebar="open">
+```
 
-##  CSS Features
+JavaScript switches the state between `open` and `closed`, while CSS controls the corresponding layout and animation.
 
-The stylesheet uses CSS custom properties, Flexbox, CSS Grid, responsive media queries, transitions, focus indicators, and dark-mode support.
+On smaller screens, the sidebar becomes a fixed off-canvas navigation panel with an overlay behind it.
 
-The sidebar changes between a desktop collapsible layout and a mobile slide-out navigation. 
+### Accessibility
 
-The category cards display their banner images when hovered, focused, or activated.
+The project uses ARIA attributes such as:
 
-##  JavaScript Functionality
-
-JavaScript controls the sidebar state and user interactions.
-
-Main functionality includes:
-
-- Opening and closing the sidebar
-- Updating `aria-expanded`
-- Managing sidebar focus
-- Closing the sidebar with the `Escape` key on mobile
-- Automatically closing the sidebar after selecting a navigation item on mobile
-- Detecting screen-size changes
-
-These behaviors are implemented using DOM manipulation, event listeners, and `matchMedia()`. 
-
-##  Accessibility
-
-Accessibility considerations include:
-
-- Semantic HTML elements
-- ARIA labels
+- `aria-label`
 - `aria-expanded`
+- `aria-controls`
 - `aria-current`
-- Keyboard navigation
-- Visible focus indicators
-- Focus management
-- `inert` sidebar state when closed
-- Reduced-motion support
+- `aria-hidden`
 
-##  Responsive Design
+This allows the sidebar controls and navigation to provide clearer information to assistive technologies.
 
-The interface adapts to different screen sizes.
+### Responsive JavaScript
 
-On desktop, the sidebar appears alongside the main content. On smaller screens, the sidebar becomes a slide-out panel with a menu button and overlay.
+The project uses:
 
+```javascript
+window.matchMedia("(max-width: 48rem)")
+```
 
-##  Project Objective
+to detect the mobile breakpoint and automatically adjust the sidebar state when the viewport changes.
 
-The objective is to develop a responsive and accessible sidebar navigation component using HTML5, CSS3, and JavaScript ES6+, while applying semantic HTML, WCAG/ARIA practices, responsive design, DOM manipulation, event handling, and smooth CSS transitions.
+### Keyboard Interaction
 
-##  Author
+Pressing **Escape** closes the sidebar on mobile devices.
+
+Navigation links also close the mobile sidebar after selection, improving the mobile browsing experience.
+
+### CSS Architecture
+
+The stylesheet uses CSS custom properties for reusable values such as:
+
+- Colors
+- Sidebar width
+- Header height
+- Animation duration
+- Transition timing
+
+The card components also use CSS variables to control their interactive image banner behavior.
+
+### Reduced Motion
+
+The project respects users who prefer reduced animation through:
+
+```css
+@media (prefers-reduced-motion: reduce)
+```
+
+Animations are minimized for a more accessible experience.
+
+## Learning Focus
+
+This project demonstrates practical frontend development concepts including:
+
+- Semantic HTML structure
+- Responsive CSS layouts
+- CSS Grid and Flexbox
+- DOM manipulation
+- Event listeners
+- Responsive JavaScript
+- Accessibility and ARIA
+- CSS animations and transitions
+- Mobile-first interaction patterns
+- Reusable component styling
+
+## Author
 
 **Mahmuda Adeeba Tul Husna**
 
-© 2026 toBATO | Adeeba
+Frontend Development Task — toBATO.to
